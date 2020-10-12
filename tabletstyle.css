@@ -1,0 +1,26 @@
+@media all and (max-width: 900px) {
+  .blog-site {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-areas:
+      "blog-header  blog-header   "
+      "blog-cards  blog-cards   "
+      "blog-cards  blog-cards   "
+      "blog-cards  blog-cards   "
+      "footer     footer   ";
+    background-color: #ebe9e2;
+    margin: 0 auto;
+  }
+
+  .blog-cards {
+    grid-area: blog-cards;
+    display: grid;
+    max-width: 800px;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
