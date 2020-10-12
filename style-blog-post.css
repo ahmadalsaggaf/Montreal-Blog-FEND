@@ -1,0 +1,166 @@
+/* genreal styling  */
+
+html {
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0;
+}
+
+.blog-menu {
+  padding: 10px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.blog-menu a {
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  color: #785a00;
+}
+.blog-menu a:hover,
+.blog-menu a:active {
+    background-color:#ede6da;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+.blog-name {
+  color: #aa8740;
+  font-size: 90px;
+}
+
+.blog-name-description {
+  font-size: 30px;
+  margin: 0;
+}
+
+
+.post-site {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "blog-header  blog-header   blog-header"
+      "post-container post-container post-container"
+      "footer     footer    footer";
+    background-color: #ebe9e2;
+    margin: 0 auto;
+  }
+
+.post-container {
+    grid-area: post-container;
+    display: grid;
+    max-width: 1000px;
+    margin: 10px auto;
+    grid-gap: 10px 50px;
+    grid-template-columns: 3fr 12fr 5fr;
+  }
+
+  .post-container>* {
+    grid-column: 2 / -2;
+  }
+
+  .post-container > figure {
+    margin: 0;
+    grid-column: 1 / -1;
+  }
+
+  .post-container>blockquote {
+    grid-column: 2 / -2;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    margin: 5px;
+    background: #e8e3d8;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0.7;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+.blog-header {
+  grid-area: blog-header;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.social-media{
+  display: flex;
+  flex-direction: row;
+}
+
+.author {
+  border-top: #c4c4c4 solid 1px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  justify-items: center;
+}
+
+.author> h4 {
+  font-style: italic;
+  font-size: 20px;
+
+}
+.author> h2 {
+  font-size: 30px;
+  color: #aa8740;
+}
+
+.author> p {
+  text-align: center;
+}
+
+.avatar{
+  border-radius: 100%;
+}
+
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 10px 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* media queries for ,desktop,tablet,mobile */
+
+  @media all and (max-width: 500px) {
+    .blog-menu{
+      flex-direction: column;
+    }
